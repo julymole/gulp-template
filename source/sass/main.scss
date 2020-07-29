@@ -1,0 +1,70 @@
+.aboutProgram {
+    background-image: url(../img/watercolor_Bg.jpg);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    width: 100%;
+    min-height: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 55px;
+    box-sizing: border-box;
+
+    &__title {
+        @extend %title;
+    }
+
+    &__txt {
+        @extend %firaSans15;
+        font-size: 17px;
+        line-height: 170%;
+        width: 690px;
+        text-align: center;
+    }
+
+    &__videoBlock {
+        position: relative;
+
+        &-btn {
+            display: block;
+            position: absolute;
+            width: 96px;
+            height: 96px;
+            border: none;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.2);
+            top: 170px;
+            left: 390px;
+            opacity: 1;
+        }
+
+        &-btn::after {
+            content: '';
+            display: block;
+            position: absolute;
+            border: 10px solid transparent;
+            border-left: 15px solid #1FC0FC;
+            top: 37px;
+            left: 43px;
+        }
+
+        &-btn::before {
+            content: '';
+            position: absolute;
+            width: 64px;
+            height: 64px;
+            border: none;
+            border-radius: 50%;
+            background-color: #fff;
+            top: 16px;
+            left: 16px;
+
+        }
+
+        &-video {}
+
+    }
+
+
+}

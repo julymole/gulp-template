@@ -1,0 +1,38 @@
+$color-txt: #484848;
+$color-white: #fff;
+$color-title: #1FC0FC;
+
+
+@mixin baground-img($size, $repeat, $position) {
+    background-size: $size;
+    background-repeat: $repeat;
+    background-position: $position;
+}
+
+@mixin txt($family, $size, $height, $weight, $font-style, $color) {
+    font-family: $family;
+    font-size: $size;
+    line-height: $height;
+    font-weight: $weight;
+    font-style: $font-style;
+    color: $color;
+}
+
+%firaSans15 {
+    font-family: 'firaSans';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 18px;
+}
+
+%title {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 49px;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    color: $color-title;
+}
