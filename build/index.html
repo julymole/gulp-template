@@ -1,56 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Стартовый шаблон</title>
-  <link rel="stylesheet" href="css/style.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Стартовый шаблон</title>
+    <link rel="stylesheet" href="css/style.min.css">
 </head>
+
 <body>
-  <header class="header">
-      <div class="header__row">
-         <a class="header__row-Tel" href="#">+ (972) 2 – 621 – 6581</a>
-         <a class="header__row-Logo" href="#"><img src="img/logo.svg" alt="logo"></a> 
-         <a class="header__row-ToForm">заказать звонок</a>
-      </div>
-      <div class="header__main">
-         <div class="header__main-content">
-             <span class="header__main-content-Txt">Учёба, путешествие и карьера для еврейской молодёжи</span>
-             <a class="header__main-content-icon" href="#"><svg width="17" height="26" viewBox="0 0 17 26" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><rect width="17" height="26" fill="url(#pattern0)"></rect><defs><pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1"><use xlink:href="#image0" transform="scale(0.0588235 0.0384615)"></use></pattern><image id="image0" width="17" height="26" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAAaCAYAAABRqrc5AAABzklEQVQ4jd2VO2hUQRSGv70bg0QNwoIoBEQDQdLEQiEpbEWIhZBCCystFFuxSKNgI1gK1mIjWBgUgphCfFWCjURiBLVTgyTE1Rif2c9iZ8nJbLKulvnhcM/zZ+bOnf+WVDL0AEeAYaAP6AYWgDfABDCW/GWo0Y6rL2yNt+rpOBcJzqm/QvOsOqFeV++qMxnZpZzkmPozFRfVy+rObJXb1QtqNRCdaZBsU6dSckE9lQ3ndlSdT/3v1F7Uk4H5ajbQp55V92b5i2FmFPVmCr6o/aGxrN5KtQdqV7a1xjt6WAC96aBeA9Ph4DYCleR3J2tgBnie/F0FsCkFc0Atnn6Ia1kNYDY9u4qQLLKmElAOtdXqAOaFiB/AfPK/Ap/XauxoQfIbGAWeAI+Axf8hAXiZrCVabadtrEOSJlVqEyu+k08p2AF0/gNJT3pWC2AyBbuBwTYJ9gADyZ9CPazW0o0cVzv+oieo14IUnEDdot4LySvq5jWGy+p5l2X0mVppFPepHwLRfXXEuuptUCvqsHo7rLqqHjQT6kMZ0ZL6UX2lvneliM9Z1+UmtUcdUG+o31wdS+oddSjOlWz+eZWB/cABoB/YSv0GTwOPgafA9zjwB58rtSzklNU8AAAAAElFTkSuQmCC"></image></defs></svg></a>
-         </div>    
-      </div>
-  </header>
-  <main>
-      <section class="aboutProgram">
-         <span class="aboutProgram__title">О программе</span>
-         <p class="aboutProgram__txt">«Маса» — совместный проект правительства Израиля и Еврейского агентства Сохнут. Более 250 учебных программ (60 на русском) и возможность стажировки в Израиле. В течение освоения программ предусмотрен грант от 4200 до 8400$.</p>
-         <div class="aboutProgram__videoBlock">
-             <button class="aboutProgram__videoBlock-btn"></button>
-             <video class="aboutProgram__videoBlock-video" src="#" poster="img/VideoPoster.jpg" preload="none" width="870" height="460" muted=""></video>  
-         </div>
-      </section>
-      <section class="programs">
-          <span class="programs__title"></span>
-          <div class="programs__buttonsBlock">
-              <button class="programs__buttonsBlock-btn"><svg width="28" height="33" viewBox="0 0 28 33" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><rect width="28" height="33" fill="url(#pattern0)"></rect><defs><pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1"><use xlink:href="#image0" transform="scale(0.0357143 0.030303)"></use></pattern><image id="image0" width="28" height="33" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAhCAYAAADK6cvnAAACgElEQVRIib2Wz0tUURTHP9lkxExZCCFiCA24UhCCVApLok0UFBHVImonrly1qo24FJEW7oVCc2VKmNHChhaCK/+CDESRFjX5g8rM2+J+X3N6zozvDb35wmHe+95zvt/zLve9M1AZRhRVQTfgFN3VMFwyhktJm92R0VeFE5cYVmVyTeHEJYJ+GawYbkVc//82qwE2gV2g3fDt4jaVcyBSQBa4B9SqOIxfQA+QAbaAK8B1rX1XZIBZ4D1wpITPDvASYJzCqUs6xlPAFHBfnbwGPgNpYA/YAO4CJ4GPeoJ0qPtt4DJwFsgDk8AJ/BZvA6fNjkwFRTl1MBASq5OpA1qKbFWAFuVsqMZiQGs5S7aax84afl7cWBmzAGPKnTdc1ui2hgsmtfBW9xd0vwvURzCsV65TLdJy0t6HRtNNDzCn68EIZgEGVTMnjUCvsVTBsBJ+6/cL/nWJilrVWI3hcgUZYNl09iiGWYCHpn5ZmmUxQuHEVYrgZB84M+uANdNhXwVmfaZ+jf2vyT8YVeIPCk8ZftHLIQ18C2mMlkpuNp2dB2Z0PRTDcEg1M9II9JqLJU+bZEIFDRHMGkINY5qeDief08Ie0GT4N+InIhhOKHfWcE3SdPL4iwWRT0Iix/EfZAe0lTFrU05eNRZPtbYAfk49ADq1eBE/ro6ps+AAoM5zFJ8Wl3TtgGf4k1mDn5WntNYpL55TvXn44hBwBrgJHKX4xP8JXAVu4Sf+Ywqfux38yczgZ9076YSRks6rImslkcdvc5fhusTl4whFRS9+W9YNty6uNwlDgE8yuK1w4hLDDZlsKZy4RLFI4dQtJm0G0GEMO+IWH67AcBX/Z/cD/h2OhT993f+vTKFcIwAAAABJRU5ErkJggg=="></image></defs></svg>
-              <span>общие</span>
-              </button>
-              <button class="programs__buttonsBlock-btn"><span></span></button>
-              <button class="programs__buttonsBlock-btn"><span></span></button>
-              <button class="programs__buttonsBlock-btn"><span></span></button>
-              <button class="programs__buttonsBlock-btn"><span></span></button>
-          </div>
-          <div>
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
-          </div>
-      </section>
-  </main>
-  <script src="js/app.js">
+    <header class="header">
+        <div class="header__row">
+            <a class="header__row-Tel" href="tel:+97226216581">+ (972) 2 – 621 – 6581</a>
+            <a class="header__row-Logo" href="#"><img src="img/logo.svg" alt="logo" width="137" height="48"></a>
+            <a class="header__row-ToForm">заказать звонок</a>
+        </div>
+        <div class="header__main">
+            <div class="header__main-content">
+                <span class="header__main-content-Txt">Учёба, путешествие и карьера для еврейской молодёжи</span>
+                <a class="header__main-content-icon" href="#"><svg width="17" height="26" viewBox="001726" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><rect width="17" height="26" fill="url(#pattern0)"></rect><defs><pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1"><use xlink:href="#image0" transform="scale(0.0588235 0.0384615)"></use></pattern><image id="image0" width="17" height="26" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAAaCAYAAABRqrc5AAABzklEQVQ4jd2VO2hUQRSGv70bg0QNwoIoBEQDQdLEQiEpbEWIhZBCCystFFuxSKNgI1gK1mIjWBgUgphCfFWCjURiBLVTgyTE1Rif2c9iZ8nJbLKulvnhcM/zZ+bOnf+WVDL0AEeAYaAP6AYWgDfABDCW/GWo0Y6rL2yNt+rpOBcJzqm/QvOsOqFeV++qMxnZpZzkmPozFRfVy+rObJXb1QtqNRCdaZBsU6dSckE9lQ3ndlSdT/3v1F7Uk4H5ajbQp55V92b5i2FmFPVmCr6o/aGxrN5KtQdqV7a1xjt6WAC96aBeA9Ph4DYCleR3J2tgBnie/F0FsCkFc0Atnn6Ia1kNYDY9u4qQLLKmElAOtdXqAOaFiB/AfPK/Ap/XauxoQfIbGAWeAI+Axf8hAXiZrCVabadtrEOSJlVqEyu+k08p2AF0/gNJT3pWC2AyBbuBwTYJ9gADyZ9CPazW0o0cVzv+oieo14IUnEDdot4LySvq5jWGy+p5l2X0mVppFPepHwLRfXXEuuptUCvqsHo7rLqqHjQT6kMZ0ZL6UX2lvneliM9Z1+UmtUcdUG+o31wdS+oddSjOlWz+eZWB/cABoB/YSv0GTwOPgafA9zjwB58rtSzklNU8AAAAAElFTkSuQmCC"></image></defs></svg></a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="about-program">
+            <h2 class="about-program__title">О программе</h2>
+            <p class="about-program__txt">«Маса» — совместный проект правительства Израиля и Еврейского агентства Сохнут. Более 250 учебных программ (60 на русском) и возможность стажировки в Израиле. В течение освоения программ предусмотрен грант от 4200 до 8400$.</p>
+            <div class="about-program__video-block">
+                <button class="about-program__video-block-btn" type="button"></button>
+                <video class="about-program__video-block-video" src="#" poster="img/VideoPoster.jpg" preload="none" width="870" height="460" muted=""></video>
+            </div>
+        </section>
+        <section class="programs">
+            <h2 class="programs__title"></h2>
+            <div class="programs__buttons-block">
+                <button class="programs__buttons-block-btn" type="button"><span class="programs__buttons-block-btn-txt1">общие</span>
+                </button>
+                <button class="programs__buttons-block-btn" type="button"><span class="programs__buttons-block-btn-txt2"></span></button>
+                <button class="programs__buttons-block-btn" type="button"><span class="programs__buttons-block-btn-txt3"></span></button>
+                <button class="programs__buttons-block-btn" type="button"><span class="programs__buttons-block-btn-txt4"></span></button>
+                <button class="programs__buttons-block-btn" type="button"><span class="programs__buttons-block-btn-txt5"></span></button>
+            </div>
+            <div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </section>
+    </main>
+    <script src="js/app.js"></script>
 </body>
+
 </html>
-</script></body></html>

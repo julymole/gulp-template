@@ -1,48 +1,13 @@
 @import "nullstyle.scss";
 @import "variables.scss";
 @import "mixins.scss";
-@import "header.scss";
-@import "main.scss";
+@import "blocks/header.scss";
+@import "blocks/main.scss";
+@import "fonts.scss";
 //@import "footer.scss";
 
-
-@font-face {
-    font-family: raleway;
-    src: url(../fonts/raleway-400.ttf);
-    font-weight: 400;
-    font-style: normal;
+body {
+    width: 1366px;
+    margin: 0 auto;
 }
 
-@font-face {
-    font-family: raleway;
-    src: url(../fonts/raleway-500.ttf);
-    font-weight: 500;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: montserrat;
-    src: url(../fonts/montserrat-900.ttf);
-    font-weight: 900;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'firaSans';
-    src: url(../fonts/firaSans-400.ttf);
-    font-weight: 400;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'firaSans';
-    src: url(../fonts/firaSans-500.ttf);
-    font-weight: 500;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'firaSans';
-    src: url(../fonts/firaSans-800.ttf);
-    font-weight: 800;
-    font-style: normal;
-}
