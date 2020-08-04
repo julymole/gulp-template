@@ -10,7 +10,7 @@ $color-title: #1FC0FC;
 }
 
 @mixin txt($family, $size, $height, $weight, $font-style, $color) {
-    font-family: $family;
+    font-family: $family, sans-serif;
     font-size: $size;
     line-height: $height;
     font-weight: $weight;
@@ -18,15 +18,24 @@ $color-title: #1FC0FC;
     color: $color;
 }
 
-%firaSans15 {
+@mixin firaSans15 {
     font-family: 'firaSans', 'sans-serif';
     font-style: normal;
     font-weight: 500;
     font-size: 15px;
     line-height: 18px;
+    color: $color-txt;
+}
+@mixin firaSans17 {
+    font-family: 'firaSans', 'sans-serif';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 170%;
+    color: $color-txt;
 }
 
-%title {
+@mixin title {
     font-family: 'Montserrat', 'sans-serif';
     font-style: normal;
     font-weight: bold;
@@ -35,4 +44,17 @@ $color-title: #1FC0FC;
     letter-spacing: -0.02em;
     text-transform: uppercase;
     color: $color-title;
+}
+@mixin markerforli {
+    content: "";
+    display: block;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: none;
+    box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.1);
+    padding-top: 7px;
+    box-sizing: border-box;
+    text-align: center;
+    color: #FFC341;
 }

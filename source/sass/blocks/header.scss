@@ -10,12 +10,11 @@
         justify-content: space-between;
         max-width: 1142px;
         margin: 32px auto 79px;
-        @extend %firaSans15;
+        @include firaSans15;
         text-transform: uppercase;
 
         .header__row-Tel {
             text-decoration: none;
-            color: $color-txt;
         }
     }
 
@@ -43,8 +42,8 @@
             background-repeat: no-repeat;
             background-position: center;
             
-            .header__main-content-Txt {
-                @include txt('firaSans', 'sans-serif', 24px, 29px, 800, normal, $color-white);
+            h2 {
+                @include txt('firaSans', 24px, 29px, 800, normal, $color-white);
                 text-align: center;
                 margin: 0 auto 32px;
                 

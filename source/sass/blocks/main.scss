@@ -1,5 +1,5 @@
 .about-program {
-    background-image: url(../img/watercolor_Bg.jpg);
+    background-image: url(../img/watercolor_bg.jpg);
     background-repeat: no-repeat;
     background-position: bottom;
     width: 100%;
@@ -11,14 +11,12 @@
     padding-bottom: 55px;
     box-sizing: border-box;
 
-    .about-program__title {
-        @extend %title;
+    h2 {
+        @include title;
     }
 
-    .about-program__txt {
-        @extend %firaSans15;
-        font-size: 17px;
-        line-height: 170%;
+    p {
+        @include firaSans17;
         width: 690px;
         text-align: center;
     }
@@ -37,37 +35,267 @@
             top: 170px;
             left: 390px;
             opacity: 1;
-            
-            &-::after {
-            content: '';
-            display: block;
-            position: absolute;
-            border: 10px solid transparent;
-            border-left: 15px solid #1FC0FC;
-            top: 37px;
-            left: 43px;
-        }
-            &-::before {
-            content: '';
-            position: absolute;
-            width: 64px;
-            height: 64px;
-            border: none;
-            border-radius: 50%;
-            background-color: #fff;
-            top: 16px;
-            left: 16px;
 
-        }
-        }
+            &::after {
+                content: '';
+                display: block;
+                position: absolute;
+                border: 10px solid transparent;
+                border-left: 15px solid #1FC0FC;
+                top: 37px;
+                left: 43px;
+            }
 
-        
+            &::before {
+                content: '';
+                position: absolute;
+                width: 64px;
+                height: 64px;
+                border: none;
+                border-radius: 50%;
+                background-color: #fff;
+                top: 16px;
+                left: 16px;
 
-        
+            }
+        }
 
         about-program__video-block-video {}
-
     }
 
+}
 
+.programs {
+    padding: 20px 304px 20px 210px;
+    margin: 0 auto;
+    background-image: url(../../img/sketch_bg.jpg);
+    background-repeat: no-repeat;
+    background-size: 680px 426px;
+    background-position: right;
+    
+    h2 {
+        @include title;
+    }
+
+    .programs__content {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+
+        .programs__content-buttons-block {
+            width: 230px;
+            height: 350px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            .programs__content-buttons-block-btn {
+                height: 68px;
+                padding: 16px 20px 17px 20px;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                border: none;
+                background-color: transparent;
+                @include firaSans15;
+                opacity: .87;
+
+                &:hover {
+                    width: 200px;
+                    height: 68px;
+                    position: relative;
+                    background-image: linear-gradient(138.15deg, #FFC341 20.46%, #FFD701 65.31%);
+                }
+
+                &:hover:after {
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    border: 34px solid transparent;
+                    border-left: 28px solid #FFD701;
+                    top: 0;
+                    right: -62px;
+                }
+
+                svg {
+                    margin-right: 20px;
+                }
+            }
+        }
+
+        .programs__content-buttons-block-btn-active {
+            width: 200px;
+            height: 68px;
+            position: relative;
+            border: none;
+            background-image: linear-gradient(138.15deg, #FFC341 20.46%, #FFD701 65.31%);
+            //transform: matrix(1, 0, 0, -1, 0, 0);
+            font-size: 16px;
+            line-height: 19px;
+            font-variant: small-caps;
+            color: $color-white;
+
+            &::after {
+                content: "";
+                display: block;
+                position: absolute;
+                border: 34px solid transparent;
+                border-left: 28px solid #FFD701;
+                top: 0px;
+                right: -62px;
+            }
+        }
+
+        .programs__content-txt-blocks-block {
+            width: 560px;
+
+            &:nth-of-type(2),
+            &:nth-of-type(3),
+            &:nth-of-type(4),
+            &:nth-of-type(5) {
+                display: none;
+            }
+
+            h3 {
+                @include title;
+                font-size: 28px;
+                line-height: 34px;
+                text-transform: none;
+            }
+
+            p {
+                @include firaSans15;
+                line-height: 170%;
+                opacity: .87;
+            }
+        }
+    }
+}
+.wanttogo {
+    width: 100%;
+    padding: 195px 0 160px 210px;
+    box-sizing: border-box;
+    background: url(../../img/backpack.jpg), url(../../img/girlflagbg.jpg);
+    background-size: 167px 226px, 818px 594px;
+    background-repeat: no-repeat, no-repeat;
+    background-position: left, right;
+    .wanttogo__content {
+        width: 477px;
+        
+        h2 {
+            margin: 0 0 30px 0;
+            @include title;
+        
+        }
+        span {
+            display: block;
+            width: 400px;
+            margin-bottom: 60px;
+            @include firaSans17;
+            opacity: .87;
+        }
+        form {
+            position: relative;
+        }
+        input[type="text"] {
+            width: 469px;
+            height: 59px;
+            padding: 0 0 0 40px;
+            box-sizing: border-box;
+            border: 2px solid #E3E3E3;
+            border-radius: 80px;
+            @include firaSans17;
+            font-variant: small-caps;
+            
+        }
+        input[type="submit"] {
+            width: 216px;
+            height: 59px;
+            position: absolute;
+            top: 0;
+            right: 0px;
+            border: none;
+            background: linear-gradient(140.64deg, #FFC341 20.46%, #FFD701 65.31%); border-radius: 80px;
+            @include firaSans17;
+            font-variant: small-caps;
+            color: $color-white;
+        }
+    }
+}
+.howtogo {
+    width: 100%;
+    min-height: 1000px;
+    padding: 200px 0 50px 719px;
+    box-sizing: border-box;
+    background-image: url(../../img/img-howtogo.png), url(../../img/stamp.png), url(../../img/watercolor_bg2.jpg);
+    background-size: 581px 707px, 254px 337px, 100%;
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-position: 0px 170px, right 400px, left -30px;;
+    .howtogo__content {
+        width: 540px;
+        h2 {
+            @include title;
+        }
+        p {
+            @include firaSans15;
+            line-height: 170%;
+            opacity: .87;
+        }
+        h3 {
+            @include firaSans17;
+        }
+        ol {
+            
+        }
+        ol li{
+            height: 50px;
+            margin: 30px 0 0 10px;
+            position: relative;
+            @include firaSans15;
+            line-height: 140%;
+            opacity: .87;
+            list-style-type: none;
+        }
+        ol li::before {
+            position: absolute;
+            top: -5px;
+            left: -60px;
+            @include markerforli;
+        }
+        ol li:nth-of-type(1):before {
+            content: "1";
+        }
+        ol li:nth-of-type(2):before {
+            content: "2";
+        }
+        ol li:nth-of-type(3):before {
+            content: "3";
+        }
+         ol li:nth-of-type(4):before {
+            content: "4";
+        }
+        ol li::after {
+            content: "";
+            display: block;
+            height: 43px;
+            border-left: 1px dashed #484848;
+            position: absolute;
+            opacity: .2;
+            left: -42px;
+            top: 32px;
+        }
+        ol li:nth-of-type(4):after {
+            display: none;
+        }
+        span {
+            display: block;
+            padding-left: 20px;
+            margin: 50px 0 0 5px;
+            @include firaSans15;
+            line-height: 140%;
+            color: rgba(72, 72, 72, .5);
+            border-left: 4px solid #FFC341;
+        }
+    }
+    
 }
