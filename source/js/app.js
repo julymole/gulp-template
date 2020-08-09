@@ -1,15 +1,42 @@
 'use strict';
-var pageHeader = document.querySelector('.page-header');
-var headerToggle = document.querySelector('.page-header__toggle');
 
-pageHeader.classList.remove('page-header--nojs');
+const details = document.querySelector('details')
 
-headerToggle.addEventListener('click', function () {
-  if (pageHeader.classList.contains('page-header--closed')) {
-    pageHeader.classList.remove('page-header--closed');
-    pageHeader.classList.add('page-header--opened');
-  } else {
-    pageHeader.classList.add('page-header--closed');
-    pageHeader.classList.remove('page-header--opened');
-  }
+details.open = true  // Отобразить содержимое
+details.open = false // Скрыть содержимое
+// Наблюдатель, который будет следить за изменением атрибута open
+const observer = new MutationObserver(function(mutations) {
+  mutations.forEach(function(mutation) {
+
+    // Елемент у которого измелился атрибут
+    const details = mutation.target
+
+    // Если елемент был закрыт — ничего не делаем
+    if (!details.open) {
+      return
+    }
+
+
+    // Иначе, находим все открытые елементы details и перебираем их
+    document.querySelectorAll('details[open]').forEach(el => {
+
+      // Исключаем из перебора елемент который мы только что открыли
+      if (el === details) {
+        return
+      }
+
+      // Закрываем все остальные елемент details
+      el.open = false
+    })
+
+  });
 });
+
+// Наблюдаем за изменением только одного атрибута
+const config = {
+  attributeFilter: ['open']
+}
+
+
+// Вешаем наблюдатель на все елементы details внутри акордиона
+document.querySelectorAll('details').forEach(el => observer.observe(el, config))

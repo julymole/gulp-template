@@ -21,15 +21,16 @@ $color-title: #1FC0FC;
 @mixin firaSans15 {
     font-family: 'firaSans', 'sans-serif';
     font-style: normal;
-    font-weight: 500;
+    font-weight: 400;
     font-size: 15px;
     line-height: 18px;
     color: $color-txt;
 }
+
 @mixin firaSans17 {
     font-family: 'firaSans', 'sans-serif';
     font-style: normal;
-    font-weight: 500;
+    font-weight: 400;
     font-size: 17px;
     line-height: 170%;
     color: $color-txt;
@@ -45,6 +46,7 @@ $color-title: #1FC0FC;
     text-transform: uppercase;
     color: $color-title;
 }
+
 @mixin markerforli {
     content: "";
     display: block;
@@ -57,4 +59,42 @@ $color-title: #1FC0FC;
     box-sizing: border-box;
     text-align: center;
     color: #FFC341;
+}
+
+@mixin markerfordetails {
+    content: "";
+    display: block;
+    width: 16px;
+    height: 48px;
+    position: absolute;
+    top: 18px;
+    left: 0px;
+    font-family: 'firaSans';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 170%;
+    background: linear-gradient(108.42deg, #FFC341 20.46%, #FFD701 65.31%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@mixin btn {
+    height: 59px;
+    border: none;
+    background: linear-gradient(140.64deg, #FFC341 20.46%, #FFD701 65.31%);
+    border-radius: 80px;
+    @include firaSans17;
+    font-variant: small-caps;
+    color: $color-white;
+}
+
+@mixin control {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    margin: 0;
+    border: 2px solid #484848;
+    border-color: #484848 #484848 transparent transparent;
+    opacity: .2;
 }

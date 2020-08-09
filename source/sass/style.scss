@@ -1,13 +1,12 @@
-@import "nullstyle.scss";
+@import "normalize.scss";
 @import "variables.scss";
 @import "mixins.scss";
 @import "blocks/header.scss";
 @import "blocks/main.scss";
 @import "fonts.scss";
-//@import "footer.scss";
+@import "blocks/footer.scss";
 
 body {
     width: 1366px;
     margin: 0 auto;
 }
-

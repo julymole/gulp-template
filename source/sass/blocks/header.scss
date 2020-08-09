@@ -10,11 +10,24 @@
         justify-content: space-between;
         max-width: 1142px;
         margin: 32px auto 79px;
-        @include firaSans15;
-        text-transform: uppercase;
 
-        .header__row-Tel {
+
+        .header__row-tel,
+        .header__row-toform {
             text-decoration: none;
+            @include firaSans15;
+            font-weight: 500;
+
+            &:hover {
+                color: #1FC0FC;
+                border-color: #1FC0FC;
+                cursor: pointer;
+            }
+        }
+
+        .header__row-toform {
+            border-bottom: 1px dashed #484848;
+            height: 20px;
         }
     }
 
@@ -41,12 +54,11 @@
             background-image: url(../img/girl.png);
             background-repeat: no-repeat;
             background-position: center;
-            
+
             h2 {
                 @include txt('firaSans', 24px, 29px, 800, normal, $color-white);
                 text-align: center;
                 margin: 0 auto 32px;
-                
             }
 
             .header__main-content-icon {
@@ -55,7 +67,7 @@
                 border: 1px solid #fff;
                 border-radius: 50%;
                 position: relative;
-                
+
                 &::before {
                     content: "";
                     display: block;
@@ -67,7 +79,7 @@
                     top: -16.5px;
                     right: -16.5px;
                 }
-                
+
                 &::after {
                     content: "";
                     display: block;
@@ -79,9 +91,6 @@
                     right: 22px;
                 }
             }
-
-           
-            
         }
     }
 }
