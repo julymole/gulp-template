@@ -1,12 +1,13 @@
 @import "normalize.scss";
 @import "variables.scss";
 @import "mixins.scss";
+@import "fonts.scss";
 @import "blocks/header.scss";
 @import "blocks/main.scss";
-@import "fonts.scss";
 @import "blocks/footer.scss";
+@import "blocks/popup.scss";
 
 body {
-    width: 1366px;
+    max-width: 1366px;
     margin: 0 auto;
 }

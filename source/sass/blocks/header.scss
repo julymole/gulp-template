@@ -1,15 +1,18 @@
 .header {
-    min-height: 906px;
-    background-image: url(../img/bg.jpg);
-    background-size: 100%;
+    max-width: 100%;
+    height: 66vw;
+    padding: 32px 50px;
+    box-sizing: border-box;
+    background-image: url(../img/girl.png), url(../img/israel.png), url(../img/bg.jpg);
+    background-size: 100% auto, 74.5% auto, 100% auto;
+    background-position: center, center 155px, top;
     background-repeat: no-repeat;
-    opacity: 1;
 
     .header__row {
         display: flex;
         justify-content: space-between;
         max-width: 1142px;
-        margin: 32px auto 79px;
+        margin: 0 auto 79px;
 
 
         .header__row-tel,
@@ -31,65 +34,106 @@
         }
     }
 
-    .header__main {
-        width: 100%;
-        background-image: url(../img/israel.png);
-        @include baground-img(1018px 340px, no-repeat, 174px 25px);
-        min-height: 609px;
-        opacity: 10;
-        padding-top: 18px;
+    .header__main-content {
+        width: 480px;
+        min-height: 44.6vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+        margin: 0 auto;
+        padding: 0 0 80px;
         box-sizing: border-box;
+        opacity: 100;
+        //background-image: url(../img/girl.png);
+        background-repeat: no-repeat;
+        background-position: center;
 
-        .header__main-content {
-            width: 480px;
-            min-height: 609px;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-end;
-            align-items: center;
-            margin: 0 auto;
-            padding: 0 0 50px;
-            box-sizing: border-box;
-            opacity: 100;
-            background-image: url(../img/girl.png);
-            background-repeat: no-repeat;
-            background-position: center;
+        h2 {
+            @include txt('firaSans', 24px, 29px, 800, normal, $color-white);
+            text-align: center;
+            margin: 0 auto 32px;
+        }
 
-            h2 {
-                @include txt('firaSans', 24px, 29px, 800, normal, $color-white);
-                text-align: center;
-                margin: 0 auto 32px;
+        .header__main-content-icon {
+            display: block;
+            padding: 8px 14px 7px;
+            border: 1px solid #fff;
+            border-radius: 50%;
+            position: relative;
+
+            &::before {
+                content: "";
+                display: block;
+                width: 76px;
+                height: 76px;
+                border: 1px dashed #fff;
+                border-radius: 50%;
+                position: absolute;
+                top: -16.5px;
+                right: -16.5px;
             }
 
-            .header__main-content-icon {
+            &::after {
+                content: "";
                 display: block;
-                padding: 8px 14px 7px;
-                border: 1px solid #fff;
-                border-radius: 50%;
-                position: relative;
+                width: .5px;
+                height: 70px;
+                background-color: #fff;
+                position: absolute;
+                top: 60px;
+                right: 22px;
+            }
+        }
+    }
+}
 
-                &::before {
-                    content: "";
-                    display: block;
-                    width: 76px;
-                    height: 76px;
-                    border: 1px dashed #fff;
-                    border-radius: 50%;
-                    position: absolute;
-                    top: -16.5px;
-                    right: -16.5px;
-                }
+@media (max-width: 1023px) {
+    .header {
+        background-size: 1024px auto, 760px auto, 1024px auto;
+        background-position: bottom, center 105px, bottom;
+        min-height: 680px;
 
-                &::after {
-                    content: "";
-                    display: block;
-                    width: 1px;
-                    height: 50px;
-                    background-color: #fff;
-                    position: absolute;
-                    top: 60px;
-                    right: 22px;
+        .header__main-content {
+            min-height: 470px;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .header {
+        min-height: 690px;
+        padding: 22px 15px;
+        background-size: 950px auto, 108% auto, 1024px auto;
+        background-position: center bottom, center 155px, bottom;
+
+        @media (max-width: 567px) {
+            background-position: center bottom, center 195px, bottom;
+
+            .header__main-content {
+                width: 300px;
+
+                h2 {
+                    font-size: 20px;
                 }
+            }
+        }
+
+        .header__row {
+            flex-direction: column;
+
+            .header__row-tel,
+            .header__row-toform {
+                align-self: flex-end;
+                justify-content: center;
+            }
+
+            .header__row-toform {
+                margin-top: -20px;
+            }
+
+            .header__row-logo {
+                margin-top: -20px;
             }
         }
     }
