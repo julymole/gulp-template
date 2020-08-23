@@ -428,7 +428,7 @@ body {
       border-radius: 50%;
       position: relative; }
       .header .header__main-content .header__main-content-icon:hover {
-        opacity: 0.8; }
+        opacity: 0.7; }
       .header .header__main-content .header__main-content-icon::before {
         content: "";
         display: block;
