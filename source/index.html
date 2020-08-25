@@ -7,8 +7,12 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Стартовый шаблон</title>
   <link rel="stylesheet" href="css/style.min.css">
-  <link rel="preload" href="fonts/fira-sans-500.woff2" as="font">
-  <link rel="preload" href="fonts/fira-sans-400.woff2" as="font">
+  <!-- <link rel="preload" href="fonts/fira-sans-400.ttf" as="font">
+  <link rel="preload" href="fonts/fira-sans-500.ttf" as="font">
+  <link rel="preload" href="fonts/fira-sans-800.ttf" as="font">
+  <link rel="preload" href="fonts/montserrat-900.ttf" as="font">
+  <link rel="preload" href="fonts/raleway-400.ttf" as="font">
+  <link rel="preload" href="fonts/raleway-500.ttf" as="font"> -->
 </head>
 
 <body>
@@ -88,7 +92,7 @@
         <h2>Хочу поехать!</h2>
         <span>Оставьте свой телефон и мы свяжемся с вами, подберём куратора и ответим на все вопросы!</span>
         <form action="#" method="post">
-          <input type="tel" placeholder="телефон">
+          <input type="tel" placeholder="телефон" required>
           <input type="submit" value="перезвоните мне">
         </form>
       </div>
@@ -371,8 +375,8 @@
       <div class="details__form">
         <p>Оставьте ваши контакты, если у вас остались вопросы — мы на них ответим!<span>Мы не передаём данные третьим лицам. Ваши данные будут в безопасности и вам не придёт спам от нас!</span></p>
         <form action="#" method="post">
-          <input type="text" placeholder="имя">
-          <input type="tel" placeholder="+7 (923) 41">
+          <input type="text" placeholder="имя" required>
+          <input type="tel" placeholder="телефон" required>
           <input type="submit" value="перезвоните мне">
         </form>
       </div>
@@ -394,11 +398,11 @@
         <h2>заказать звонок</h2>
         <p>Оставьте ваши контактные данные, мы&nbsp;свяжемся с&nbsp;вами в&nbsp;течение рабочего дня и&nbsp;обязательно поможем найти ответ на&nbsp;ваш вопрос!</p>
         <form action="#" method="post">
-          <input type="text" placeholder="имя">
-          <input type="tel" placeholder="телефон">
+          <input type="text" placeholder="имя" required>
+          <input type="tel" placeholder="телефон" required>
           <input type="submit" value="перезвоните мне">
           <label>
-            <input type="checkbox">
+            <input type="checkbox" required>
             <span class="newcheckbox"></span>
             <span>Нажимая на кнопку, вы даёте согласие на обработку персональных данных</span>
           </label>

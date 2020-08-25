@@ -40,3 +40,11 @@ const config = {
 
 // Вешаем наблюдатель на все елементы details внутри акордиона
 document.querySelectorAll('details').forEach(el => observer.observe(el, config)) */
+
+
+const modal = document.querySelector(".popup");
+const btnClose = document.querySelector(".popup__close");
+
+btnClose.addEventListener("click", function (){
+    modal.classList.add("popup");
+});
