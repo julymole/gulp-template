@@ -22,7 +22,6 @@
     justify-content: center;
     padding: 30px 10px;
     box-sizing: border-box;
-    
 
     .popup__content {
       width: 480px;
@@ -118,6 +117,7 @@
           &:focus {
             outline: none;
           }
+
           &:hover {
             cursor: pointer;
           }
@@ -134,6 +134,7 @@
         font-size: 13px;
         opacity: 0.74;
         user-select: none;
+
         &:hover {
           cursor: pointer;
         }
@@ -227,6 +228,7 @@
           input[type="submit"] {
             width: 264px;
             margin: 0 auto;
+
             &:hover {
               cursor: pointer;
             }
