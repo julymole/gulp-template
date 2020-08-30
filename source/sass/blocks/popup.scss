@@ -5,14 +5,7 @@
   background: rgba(229, 229, 229, 0.9);
   top: 0;
   left: 0;
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.8s ease 0s;
-
-  &:target {
-    opacity: 1;
-    visibility: visible;
-  }
+  display: none;
 
   .popup__body {
     max-width: 100%;
@@ -40,6 +33,10 @@
         top: 30px;
         width: 35px;
         height: 35px;
+
+        &:hover {
+          cursor: pointer;
+        }
 
         &:focus {
           outline: none;
@@ -246,8 +243,7 @@
   background: rgba(229, 229, 229, 0.9);
   top: 0;
   left: 0;
-  opacity: 0;
-  visibility: hidden;
+  display: none;
 
   .popup-taken__body {
     min-height: 100%;

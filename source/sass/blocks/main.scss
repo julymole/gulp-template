@@ -38,6 +38,7 @@
       background-color: rgba(255, 255, 255, 0.2);
       top: 37%;
       left: 44%;
+      z-index: 10;
 
       &:hover {
         cursor: pointer;
@@ -190,6 +191,10 @@
           position: relative;
           background-image: linear-gradient(138.15deg, #ffc341 20.46%, #ffd701 65.31%);
           cursor: pointer;
+
+          svg {
+            fill: #ffffff;
+          }
         }
 
         &:hover::after {
@@ -202,36 +207,34 @@
           right: -62px;
         }
 
-        &:focus {
-          outline: none;
-        }
-
         svg {
+          fill: black;
           margin-right: 20px;
         }
-      }
-    }
 
-    .programs__buttons-wrapper-btn-active {
-      width: 200px;
-      height: 68px;
-      position: relative;
-      border: none;
-      background-image: linear-gradient(138.15deg, #ffc341 20.46%, #ffd701 65.31%);
-      //transform: matrix(1, 0, 0, -1, 0, 0);
-      font-size: 16px;
-      line-height: 19px;
-      font-variant: small-caps;
-      color: $color-white;
+        &:focus {
+          width: 200px;
+          height: 68px;
+          position: relative;
+          outline: none;
+          border: none;
+          background-image: linear-gradient(138.15deg, #ffc341 20.46%, #ffd701 65.31%);
+          //transform: matrix(1, 0, 0, -1, 0, 0);
+          font-size: 16px;
+          line-height: 19px;
+          font-variant: small-caps;
+          color: $color-white;
 
-      &::after {
-        content: "";
-        display: block;
-        position: absolute;
-        border: 34px solid transparent;
-        border-left: 28px solid #ffd701;
-        top: 0;
-        right: -62px;
+          &:focus::after {
+            content: "";
+            display: block;
+            position: absolute;
+            border: 34px solid transparent;
+            border-left: 28px solid #ffd701;
+            top: 0;
+            right: -62px;
+          }
+        }
       }
     }
 
