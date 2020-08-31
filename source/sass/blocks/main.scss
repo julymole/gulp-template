@@ -31,40 +31,44 @@
     button {
       display: block;
       position: absolute;
+      top: 37%;
+      left: 44%;
+      z-index: 10;
       width: 96px;
       height: 96px;
       border: none;
       border-radius: 50%;
       background-color: rgba(255, 255, 255, 0.2);
-      top: 37%;
-      left: 44%;
-      z-index: 10;
 
       &:hover {
         cursor: pointer;
         opacity: 0.8;
       }
 
+      &:focus {
+        outline: none;
+      }
+
       &::after {
         content: "";
         display: block;
         position: absolute;
-        border: 10px solid transparent;
-        border-left: 15px solid #1fc0fc;
         top: 37px;
         left: 43px;
+        border: 10px solid transparent;
+        border-left: 15px solid #1fc0fc;
       }
 
       &::before {
         content: "";
         position: absolute;
+        top: 16px;
+        left: 16px;
         width: 64px;
         height: 64px;
         border: none;
         border-radius: 50%;
         background-color: #ffffff;
-        top: 16px;
-        left: 16px;
       }
     }
   }
@@ -124,17 +128,17 @@
         height: 80px;
 
         &::after {
-          border: 7px solid transparent;
-          border-left: 12px solid #1fc0fc;
           top: 34px;
           left: 37px;
+          border: 7px solid transparent;
+          border-left: 12px solid #1fc0fc;
         }
 
         &::before {
-          width: 53.3px;
-          height: 53.3px;
           top: 14px;
           left: 14px;
+          width: 53.3px;
+          height: 53.3px;
         }
       }
 
@@ -166,19 +170,19 @@
     align-items: flex-start;
 
     .programs__buttons-wrapper {
-      width: 230px;
-      height: 350px;
-      padding-right: 50px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      width: 230px;
+      height: 350px;
+      padding-right: 50px;
 
       .programs__buttons-wrapper-btn {
-        height: 68px;
-        padding: 16px 20px 17px 20px;
         display: flex;
         justify-content: flex-start;
         align-items: center;
+        height: 68px;
+        padding: 16px 20px 17px 20px;
         border: none;
         background-color: transparent;
 
@@ -186,9 +190,9 @@
         opacity: 0.87;
 
         &:hover {
+          position: relative;
           width: 200px;
           height: 68px;
-          position: relative;
           background-image: linear-gradient(138.15deg, #ffc341 20.46%, #ffd701 65.31%);
           cursor: pointer;
 
@@ -201,21 +205,21 @@
           content: "";
           display: block;
           position: absolute;
-          border: 34px solid transparent;
-          border-left: 28px solid #ffd701;
           top: 0;
           right: -62px;
+          border: 34px solid transparent;
+          border-left: 28px solid #ffd701;
         }
 
         svg {
           fill: black;
-          margin-right: 20px;
+          margin-right: 15px;
         }
 
         &:focus {
+          position: relative;
           width: 200px;
           height: 68px;
-          position: relative;
           outline: none;
           border: none;
           background-image: linear-gradient(138.15deg, #ffc341 20.46%, #ffd701 65.31%);
@@ -229,10 +233,10 @@
             content: "";
             display: block;
             position: absolute;
-            border: 34px solid transparent;
-            border-left: 28px solid #ffd701;
             top: 0;
             right: -62px;
+            border: 34px solid transparent;
+            border-left: 28px solid #ffd701;
           }
         }
       }
@@ -285,23 +289,22 @@
       flex-wrap: wrap;
 
       .programs__content-buttons-block {
+        flex-direction: row;
+        justify-content: flex-start;
+        align-content: center;
+        flex-wrap: wrap;
         width: 100%;
         height: 140px;
         margin-bottom: 40px;
         padding-right: 5px;
-        flex-direction: row;
-        justify-content: flex-start;
-        align-content: center;
-
-        flex-wrap: wrap;
 
         .programs__content-buttons-block-btn {
+          justify-content: flex-start;
+          align-items: center;
           width: 181px;
           height: 48px;
           padding: 5px 0 5px 10px;
           margin: 0 5px 5px 0;
-          justify-content: flex-start;
-          align-items: center;
           border-radius: 60.6704px;
           text-transform: lowercase;
           font-size: 16px;
@@ -392,10 +395,10 @@
 
     input[type="submit"] {
       @include btn;
-      width: 216px;
       position: absolute;
       top: 0;
       right: 6px;
+      width: 216px;
 
       &:hover {
         cursor: pointer;
@@ -442,9 +445,9 @@
       }
 
       input[type="submit"] {
+        right: 108px;
         height: 52px;
         width: 196px;
-        right: 108px;
       }
     }
   }
@@ -564,13 +567,13 @@
 
     ol li::after {
       content: "";
+      position: absolute;
+      left: -42px;
+      top: 32px;
       display: block;
       height: 43px;
       border-left: 1px dashed #484848;
-      position: absolute;
       opacity: 0.2;
-      left: -42px;
-      top: 32px;
     }
 
     ol li:nth-of-type(4)::after {
@@ -836,11 +839,11 @@
 
   button {
     @include btn;
-    width: 230px;
     display: flex;
-    padding: 0 43px;
     justify-content: space-between;
     align-items: center;
+    width: 230px;
+    padding: 0 43px;
 
     &:hover {
       cursor: pointer;
@@ -912,8 +915,8 @@
   }
 
   details {
-    width: 560px;
     position: relative;
+    width: 560px;
     padding: 30px 0 30px 30px;
     box-sizing: border-box;
     border-bottom: 1px solid rgba(72, 72, 72, 0.2);
@@ -930,11 +933,11 @@
       &::after {
         content: "";
         display: block;
-        width: 10px;
-        height: 10px;
         position: absolute;
         top: 33px;
         right: 30px;
+        width: 10px;
+        height: 10px;
         border: 2px solid #1fc0fc;
         border-color: #1fc0fc #1fc0fc transparent transparent;
         transform: rotate(135deg);
@@ -1158,9 +1161,9 @@
 
       .reviews__slider-figcaption-link {
         @include firaSans17;
+        position: relative;
         color: #1fc0fc;
         text-decoration: none;
-        position: relative;
 
         &::after {
           content: "";
@@ -1173,10 +1176,10 @@
       }
 
       .reviews__slider-figcaption-row {
-        max-width: 680px;
         display: flex;
         justify-content: space-between;
         align-items: center;
+        max-width: 680px;
         margin: 30px 0 0 0;
 
         .reviews__slider-figcaption-row-pagination {
@@ -1185,9 +1188,9 @@
 
         .reviews__slider-figcaption-row-socials {
           display: flex;
-          width: 100px;
           justify-content: space-between;
           align-items: center;
+          width: 100px;
 
           a {
             display: block;
@@ -1322,10 +1325,10 @@
   }
 
   .details__curator {
-    width: 400px;
-    margin: 45px 0 0 0;
     display: flex;
     justify-content: space-between;
+    width: 400px;
+    margin: 45px 0 0 0;
 
     .details__curator-figcaptoin {
       width: 250px;
@@ -1540,11 +1543,11 @@
 
     .details__form {
       form {
-        height: 200px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
+        height: 200px;
 
         input[type="text"],
         input[type="tel"] {

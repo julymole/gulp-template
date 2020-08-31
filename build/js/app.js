@@ -49,8 +49,9 @@ btnClose.addEventListener("click", function (){
     modal.classList.add("popup");
 }); */
 
+//маска на input type='tel'
 $(document).ready(function () {
-  $("#phone").mask("+7 (999) 999-99-99");
+  $(".phone").mask("+7 (999) 999-99-99");
 
   // Открытие popup при клике на "заказать звонок"
   $('.header__row-toform').click(function () {
