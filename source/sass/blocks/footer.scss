@@ -12,30 +12,30 @@
     opacity: 0.5;
     text-decoration: none;
   }
+}
 
-  .footer__socials {
-    display: flex;
-    justify-content: space-between;
-    width: 120px;
-    height: 25px;
+.footer__socials {
+  display: flex;
+  justify-content: space-between;
+  width: 120px;
+  height: 25px;
 
-    a {
-      display: block;
-      width: 22px;
-      height: 22px;
-      background-image: url("../../img/sm.svg");
+  a {
+    display: block;
+    width: 22px;
+    height: 22px;
+    background-image: url("../../img/sm.svg");
 
-      &:nth-of-type(1) {
-        background-position: 0;
-      }
+    &:nth-of-type(1) {
+      background-position: 0;
+    }
 
-      &:nth-of-type(2) {
-        background-position: 24px;
-      }
+    &:nth-of-type(2) {
+      background-position: 24px;
+    }
 
-      &:nth-of-type(3) {
-        background-position: 65px;
-      }
+    &:nth-of-type(3) {
+      background-position: 65px;
     }
   }
 }
