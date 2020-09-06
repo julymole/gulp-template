@@ -28,9 +28,13 @@
 
 .about-program__video-block {
   position: relative;
+  width: 870px;
+  height: 460px;
   background-image: url(../../img/videoposter.jpg);
   background-size: 100%;
   background-position: center;
+  background-repeat: no-repeat;
+  z-index: 1000;
 
   button {
     display: block;
@@ -107,10 +111,7 @@
   }
 
   .about-program__video-block {
-    .about-program__video-block-video {
-      max-width: 95%;
-      height: auto;
-    }
+    max-width: 95%;
   }
 }
 
@@ -127,6 +128,8 @@
   }
 
   .about-program__video-block {
+    max-width: 100%;
+
     button {
       width: 80px;
       height: 80px;
@@ -144,10 +147,6 @@
         width: 53.3px;
         height: 53.3px;
       }
-    }
-
-    .about-program__video-block-video {
-      max-width: 100%;
     }
   }
 }
@@ -282,6 +281,7 @@
       font-size: 32px;
     }
   }
+
   .programs__content-txt-blocks-block {
     p {
       width: 450px;
@@ -337,6 +337,10 @@
 
   h3 {
     font-size: 24px;
+  }
+
+  p {
+    max-width: 100%;
   }
 }
 
@@ -1067,7 +1071,9 @@ details[open] summary::after {
     background-size: 167px 177px;
     background-position: left 400px;
     padding: 0 0 0 16px;
-
+    details {
+      max-width: 95%;
+    }
     h2 {
       text-align: center;
     }
@@ -1324,7 +1330,7 @@ details[open] summary::after {
 .details__curator {
   display: flex;
   justify-content: space-between;
-  width: 400px;
+  max-width: 400px;
   margin: 45px 0 0 0;
 }
 
@@ -1489,7 +1495,7 @@ details[open] summary::after {
     @media (max-width: 860px) {
       .details__curator {
         margin: 25px 0 0 0;
-        width: 370px;
+        max-width: 370px;
       }
     }
 
@@ -1533,8 +1539,9 @@ details[open] summary::after {
 
   .details__form {
     p {
-        margin: 30px auto;
-      }
+      margin: 30px auto;
+    }
+
     form {
       display: flex;
       flex-direction: column;

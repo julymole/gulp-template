@@ -539,9 +539,13 @@ body {
 
 .about-program__video-block {
   position: relative;
+  width: 870px;
+  height: 460px;
   background-image: url(../../img/videoposter.jpg);
   background-size: 100%;
-  background-position: center; }
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 1000; }
   .about-program__video-block button {
     display: block;
     position: absolute;
@@ -602,9 +606,8 @@ body {
         font-size: 14px; } }
 
 @media (max-width: 1024px) {
-  .about-program__video-block .about-program__video-block-video {
-    max-width: 95%;
-    height: auto; } }
+  .about-program__video-block {
+    max-width: 95%; } }
 
 @media (max-width: 767px) {
   .about-program {
@@ -614,21 +617,21 @@ body {
     .about-program p {
       max-width: 86%;
       text-align: left; }
-  .about-program__video-block button {
-    width: 80px;
-    height: 80px; }
-    .about-program__video-block button::after {
-      top: 34px;
-      left: 37px;
-      border: 7px solid transparent;
-      border-left: 12px solid #1fc0fc; }
-    .about-program__video-block button::before {
-      top: 14px;
-      left: 14px;
-      width: 53.3px;
-      height: 53.3px; }
-  .about-program__video-block .about-program__video-block-video {
-    max-width: 100%; } }
+  .about-program__video-block {
+    max-width: 100%; }
+    .about-program__video-block button {
+      width: 80px;
+      height: 80px; }
+      .about-program__video-block button::after {
+        top: 34px;
+        left: 37px;
+        border: 7px solid transparent;
+        border-left: 12px solid #1fc0fc; }
+      .about-program__video-block button::before {
+        top: 14px;
+        left: 14px;
+        width: 53.3px;
+        height: 53.3px; } }
 
 .programs {
   max-width: 100%;
@@ -818,6 +821,8 @@ body {
   max-width: 100%; }
   .programs__content-txt-blocks-block h3 {
     font-size: 24px; }
+  .programs__content-txt-blocks-block p {
+    max-width: 100%; }
 
 .wanttogo {
   max-width: 100%;
@@ -1468,6 +1473,8 @@ details[open] summary::after {
     background-size: 167px 177px;
     background-position: left 400px;
     padding: 0 0 0 16px; }
+    .FAQ details {
+      max-width: 95%; }
     .FAQ h2 {
       text-align: center; }
   details {
@@ -1787,7 +1794,7 @@ details[open] summary::after {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  width: 400px;
+  max-width: 400px;
   margin: 45px 0 0 0; }
 
 .details__curator-figcaptoin {
@@ -1963,7 +1970,7 @@ details[open] summary::after {
   @media (max-width: 1023px) and (max-width: 860px) {
     .details .details__curator {
       margin: 25px 0 0 0;
-      width: 370px; } }
+      max-width: 370px; } }
 
 @media (max-width: 1023px) {
     .details p {
