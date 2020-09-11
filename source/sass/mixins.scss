@@ -4,19 +4,18 @@
   background-position: $position;
 }
 
-@mixin txt($family, $size, $height, $weight, $font-style, $color) {
-  font-family: $family, "Arial", sans-serif;
+@mixin txt($family, $size, $height, $weight, $color) {
+  font-family: $family, "arial", sans-serif;
   font-size: $size;
   line-height: $height;
   font-weight: $weight;
-  font-style: $font-style;
   color: $color;
 }
 
 @mixin firaSans15 {
   font-family: "firaSans", "Arial", sans-serif;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 500;
   font-size: 15px;
   line-height: 18px;
   color: $color-txt;
@@ -32,12 +31,12 @@
 }
 
 @mixin title {
-  font-family: "Montserrat", "Arial", sans-serif;
+  font-family: "montserrat", "Arial", sans-serif;
   font-style: normal;
-  font-weight: bold;
+  font-weight: 700;
   font-size: 40px;
   line-height: 49px;
-  letter-spacing: -0.02em;
+  letter-spacing: 2px;
   text-transform: uppercase;
   color: $color-title;
 }

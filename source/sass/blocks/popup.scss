@@ -85,7 +85,12 @@
         justify-content: space-between;
         align-items: center;
         height: 270px;
-
+        
+        input::-webkit-input-placeholder {
+          @include firaSans17;
+          font-weight: 500;
+          
+        }
 
         input[type="text"],
         input[type="tel"] {
@@ -98,11 +103,11 @@
           border: 2px solid #e3e3e3;
 
           @include firaSans17;
-          font-weight: 500;
           opacity: 0.5;
 
           &:focus {
             outline: none;
+            font-weight: 400;
           }
         }
 
