@@ -120,15 +120,25 @@
     min-height: 500px;
     padding: 0;
     background-position: center 0;
+    
+    h2 {
+      margin-bottom: 17px;
+    }
 
     p {
-      max-width: 86%;
+      max-width: 90%;
       text-align: left;
+      font-size: 16px;
+      line-height: 160%;
+      margin-bottom: 0;
     }
   }
 
   .about-program__video-block {
     max-width: 100%;
+    height: 320px;
+    background-size: 140%;
+  
 
     button {
       width: 80px;
@@ -295,8 +305,13 @@
 
 @media (max-width: 767px) {
   .programs {
-    padding: 100px 17px 0;
+    padding: 30px 17px 0;
     background-position: right 300px;
+    
+    h2 {
+      text-align: center;
+      margin-bottom: 15px;
+    }
 
     .programs__content {
       flex-wrap: wrap;
@@ -463,16 +478,17 @@
 
 @media (max-width: 767px) {
   .wanttogo {
-    min-height: 800px;
-    padding: 70px 17px 410px 17px;
+    min-height: 600px;
+    padding: 55px 17px 400px 17px;
     background-size: 120px auto, 130% auto;
-    background-position: left top, center 350px;
+    background-position: left top, center 340px;
   }
 
   .wanttogo__content {
     h2 {
       text-align: center;
       margin-bottom: 10px;
+      letter-spacing: 0.5px;
     }
 
     span {
@@ -662,7 +678,7 @@
   .howtogo {
     padding: 50px 5%;
     background-image: url("../img/stamp.png");
-    background-position: right 280px;
+    background-position: right 310px;
 
     .howtogo__content {
       p {
@@ -677,6 +693,12 @@
       span {
         font-size: 14px;
         line-height: 160%;
+      }
+      ol li::before {
+        left: -47px;
+      }
+      ol li::after {
+        left: -30px;
       }
     }
   }
@@ -892,6 +914,7 @@
     h2 {
       width: 310px;
       font-size: 40px;
+      letter-spacing: -0.2px;
       margin: 0 auto 22vw auto;
     }
 
@@ -1076,7 +1099,7 @@ details[open] summary::after {
     background-image: url("../img/bag.png");
     background-size: 167px 177px;
     background-position: left 400px;
-    padding: 0 0 0 16px;
+    padding: 0 0 0 12px;
     details {
       max-width: 95%;
     }
@@ -1086,7 +1109,7 @@ details[open] summary::after {
   }
 
   details {
-    padding: 15px 0 15px 25px;
+    padding: 15px 10px 15px 20px;
     margin: 0 auto;
 
     summary {
@@ -1094,10 +1117,9 @@ details[open] summary::after {
       padding: 0;
       font-size: 16px;
     }
-
-    p {
-      width: 95%;
-    }
+  }
+  details[open] p {
+      width: 300px;
   }
 }
 

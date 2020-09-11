@@ -479,13 +479,13 @@ body {
 
 @media (max-width: 767px) {
   .header {
-    min-height: 690px;
-    padding: 22px 15px;
-    background-size: 950px auto, 108% auto, 1024px auto;
+    min-height: 630px;
+    padding: 21px 8px 0 13px;
+    background-size: 880px auto, 108% auto, 930px auto;
     background-position: center bottom, center 155px, bottom; } }
   @media (max-width: 767px) and (max-width: 567px) {
     .header {
-      background-position: center bottom, center 195px, bottom; } }
+      background-position: center bottom, center 172px, bottom; } }
 
 @media (max-width: 767px) {
     .header .header__main-content {
@@ -503,11 +503,14 @@ body {
           align-self: flex-end;
       -webkit-box-pack: center;
           -ms-flex-pack: center;
-              justify-content: center; }
+              justify-content: center;
+      font-size: 14px; }
     .header__row .header__row-toform {
-      margin-top: -20px; }
+      margin-top: -24px; }
     .header__row .header__row-logo {
-      margin-top: -20px; } }
+      -ms-flex-item-align: start;
+          align-self: flex-start;
+      margin-top: -22px; } }
 
 .about-program {
   background-image: url("../img/watercolor_bg.jpg");
@@ -629,11 +632,18 @@ body {
     min-height: 500px;
     padding: 0;
     background-position: center 0; }
+    .about-program h2 {
+      margin-bottom: 17px; }
     .about-program p {
-      max-width: 86%;
-      text-align: left; }
+      max-width: 90%;
+      text-align: left;
+      font-size: 16px;
+      line-height: 160%;
+      margin-bottom: 0; }
   .about-program__video-block {
-    max-width: 100%; }
+    max-width: 100%;
+    height: 320px;
+    background-size: 140%; }
     .about-program__video-block button {
       width: 80px;
       height: 80px; }
@@ -795,8 +805,11 @@ body {
 
 @media (max-width: 767px) {
   .programs {
-    padding: 100px 17px 0;
+    padding: 30px 17px 0;
     background-position: right 300px; }
+    .programs h2 {
+      text-align: center;
+      margin-bottom: 15px; }
     .programs .programs__content {
       -ms-flex-wrap: wrap;
           flex-wrap: wrap; }
@@ -953,13 +966,14 @@ body {
 
 @media (max-width: 767px) {
   .wanttogo {
-    min-height: 800px;
-    padding: 70px 17px 410px 17px;
+    min-height: 600px;
+    padding: 55px 17px 400px 17px;
     background-size: 120px auto, 130% auto;
-    background-position: left top, center 350px; }
+    background-position: left top, center 340px; }
   .wanttogo__content h2 {
     text-align: center;
-    margin-bottom: 10px; }
+    margin-bottom: 10px;
+    letter-spacing: 0.5px; }
   .wanttogo__content span {
     font-size: 16px;
     width: 286px;
@@ -1117,7 +1131,7 @@ body {
   .howtogo {
     padding: 50px 5%;
     background-image: url("../img/stamp.png");
-    background-position: right 280px; }
+    background-position: right 310px; }
     .howtogo .howtogo__content p {
       line-height: 160%; }
     .howtogo .howtogo__content h3 {
@@ -1125,7 +1139,11 @@ body {
       line-height: 160%; }
     .howtogo .howtogo__content span {
       font-size: 14px;
-      line-height: 160%; } }
+      line-height: 160%; }
+    .howtogo .howtogo__content ol li::before {
+      left: -47px; }
+    .howtogo .howtogo__content ol li::after {
+      left: -30px; } }
 
 .lifeinisrael {
   width: 100%;
@@ -1333,6 +1351,7 @@ body {
     .masaisrael h2 {
       width: 310px;
       font-size: 40px;
+      letter-spacing: -0.2px;
       margin: 0 auto 22vw auto; }
     .masaisrael p {
       width: 95%;
@@ -1493,20 +1512,20 @@ details[open] summary::after {
     background-image: url("../img/bag.png");
     background-size: 167px 177px;
     background-position: left 400px;
-    padding: 0 0 0 16px; }
+    padding: 0 0 0 12px; }
     .FAQ details {
       max-width: 95%; }
     .FAQ h2 {
       text-align: center; }
   details {
-    padding: 15px 0 15px 25px;
+    padding: 15px 10px 15px 20px;
     margin: 0 auto; }
     details summary {
       width: 85%;
       padding: 0;
       font-size: 16px; }
-    details p {
-      width: 95%; } }
+  details[open] p {
+    width: 300px; } }
 
 .reviews {
   padding: 50px 14% 75px 7.5%;

@@ -117,13 +117,13 @@ body {
 
 @media (max-width: 767px) {
   .header {
-    min-height: 690px;
-    padding: 22px 15px;
-    background-size: 950px auto, 108% auto, 1024px auto;
+    min-height: 630px;
+    padding: 21px 8px 0 13px;
+    background-size: 880px auto, 108% auto, 930px auto;
     background-position: center bottom, center 155px, bottom;
 
     @media (max-width: 567px) {
-      background-position: center bottom, center 195px, bottom;
+      background-position: center bottom, center 172px, bottom;
     }
 
     .header__main-content {
@@ -142,14 +142,16 @@ body {
     .header__row-toform {
       align-self: flex-end;
       justify-content: center;
+      font-size: 14px;
     }
 
     .header__row-toform {
-      margin-top: -20px;
+      margin-top: -24px;
     }
 
     .header__row-logo {
-      margin-top: -20px;
+      align-self: flex-start;
+      margin-top: -22px;
     }
   }
 }
