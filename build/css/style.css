@@ -1518,12 +1518,14 @@ details[open] summary::after {
     .FAQ h2 {
       text-align: center; }
   details {
-    padding: 15px 10px 15px 20px;
+    padding: 15px 0 15px 20px;
     margin: 0 auto; }
     details summary {
       width: 85%;
       padding: 0;
       font-size: 16px; }
+      details summary::after {
+        right: 20px; }
   details[open] p {
     width: 300px; } }
 
