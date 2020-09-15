@@ -120,7 +120,7 @@
     min-height: 500px;
     padding: 0;
     background-position: center 0;
-    
+
     h2 {
       margin-bottom: 17px;
     }
@@ -138,9 +138,11 @@
     max-width: 100%;
     height: 320px;
     background-size: 140%;
-  
+
 
     button {
+      left: 37%;
+      top: 40%;
       width: 80px;
       height: 80px;
 
@@ -163,7 +165,7 @@
 
 .programs {
   max-width: 100%;
-  padding: 145px 22.3% 10px 14.8%;
+  padding: 145px 22% 10px 15%;
   box-sizing: border-box;
   margin: 0 auto;
   background-image: url("../img/sketch_bg.jpg");
@@ -172,7 +174,7 @@
   background-position: right 50px;
 
   h2 {
-    margin: 0 0 65px 0;
+    margin: 0 0 65px 3px;
 
     @include title;
   }
@@ -256,6 +258,30 @@
   }
 }
 
+.active {
+  position: relative;
+  width: 200px;
+  height: 68px;
+  outline: none;
+  border: none;
+  background-image: linear-gradient(138.15deg, #ffc341 20.46%, #ffd701 65.31%);
+  //transform: matrix(1, 0, 0, -1, 0, 0);
+  font-size: 16px;
+  line-height: 19px;
+  font-variant: small-caps;
+  color: $color-white;
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: -62px;
+    border: 34px solid transparent;
+    border-left: 28px solid #ffd701;
+  }
+}
+
 .programs__content-txt-blocks-block {
   max-width: 560px;
 
@@ -296,6 +322,7 @@
   .programs__content-txt-blocks-block {
     p {
       width: 450px;
+
       @media (max-width: 850px) {
         width: 400px;
       }
@@ -305,9 +332,9 @@
 
 @media (max-width: 767px) {
   .programs {
-    padding: 30px 17px 0;
+    padding: 30px 17px 22px;
     background-position: right 300px;
-    
+
     h2 {
       text-align: center;
       margin-bottom: 15px;
@@ -352,14 +379,17 @@
 }
 
 .programs__content-txt-blocks-block {
-  max-width: 100%;
+  max-width: 95%;
 
   h3 {
     font-size: 24px;
+    margin: 12px 0 16px;
   }
 
   p {
     max-width: 100%;
+    line-height: 22px;
+    letter-spacing: -0.7px;
   }
 }
 
@@ -479,15 +509,15 @@
 @media (max-width: 767px) {
   .wanttogo {
     min-height: 600px;
-    padding: 55px 17px 400px 17px;
-    background-size: 120px auto, 130% auto;
+    padding: 42px 17px 400px 17px;
+    background-size: 105px auto, 130% auto;
     background-position: left top, center 340px;
   }
 
   .wanttogo__content {
     h2 {
       text-align: center;
-      margin-bottom: 10px;
+      margin-bottom: 17px;
       letter-spacing: 0.5px;
     }
 
@@ -527,7 +557,7 @@
 .howtogo {
   max-width: 100%;
   min-height: 1200px;
-  padding: 12.5% 0 50px 52%;
+  padding: 12.5% 0 50px 51.2%;
   box-sizing: border-box;
   background-image: url("../img/img-howtogo.png"), url("../img/stamp.png"), url("../img/watercolor_bg2.jpg");
   background-size: 42.5% auto, 16% auto, 100%;
@@ -549,7 +579,7 @@
       line-height: 170%;
       opacity: 0.87;
       margin: 0 0 35px;
-    } 
+    }
 
     h3 {
       @include firaSans17;
@@ -676,29 +706,50 @@
 
 @media (max-width: 767px) {
   .howtogo {
-    padding: 50px 5%;
+    padding: 53px 5%;
     background-image: url("../img/stamp.png");
-    background-position: right 310px;
+    background-position: right 330px;
+    background-size: 225px 220px;
 
     .howtogo__content {
+      h2 {
+        text-align: center;
+        margin: 0 0 20px;
+      }
+
       p {
         line-height: 160%;
+        margin-bottom: 20px;
       }
 
       h3 {
         font-weight: 500;
         line-height: 160%;
+        margin-bottom: 35px;
       }
 
       span {
+        width: 95%; 
+        margin-top: 38px;
+        padding-left: 5px;
         font-size: 14px;
         line-height: 160%;
       }
-      ol li::before {
-        left: -47px;
+      
+      ol li {
+         margin-top: 35px;
+        line-height: 140%;
+        
+        &::before {
+        left: -48px;
+        top: 0;
       }
-      ol li::after {
+
+      &::after {
         left: -30px;
+        top: 35px;
+        height: 50px;
+      }
       }
     }
   }
@@ -707,7 +758,7 @@
 .lifeinisrael {
   width: 100%;
   margin: -218px 0 0 0;
-  padding: 20px 8.3% 100px 7.6%;
+  padding: 20px 7.5% 100px 7.2%;
   box-sizing: border-box;
   background-image: url("../img/watercolor_bg.png"), url("../img/watch.png");
   background-size: 100%, 100px 150px;
@@ -715,7 +766,7 @@
   background-position: top, right 650px;
 
   h2 {
-    margin: 0px 0 25px;
+    margin: 0px 0 25px 12px;
     text-align: center;
 
     @include title;
@@ -724,7 +775,7 @@
   span {
     display: block;
     max-width: 720px;
-    margin: 0 auto;
+    margin: 0 auto 0;
     text-align: center;
 
     @include firaSans17;
@@ -736,7 +787,7 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  margin-top: -15px;
+  margin-top: -22px;
 
   picture img {
     max-width: 100%;
@@ -815,10 +866,19 @@
 
 @media (max-width: 767px) {
   .lifeinisrael {
+    margin-top: -193px;
+    padding: 20px 9% 82px 5%;
     background: none;
+    
+    h2 {
+      line-height: 120%;
+    }
 
     span {
       text-align: left;
+      letter-spacing: 0.7px;
+      line-height: 175%;
+      margin-bottom: 45px;
     }
   }
 
@@ -827,14 +887,14 @@
 
     picture img {
       display: block;
-      width: 90vw;
+      width: 100vw;
       height: auto;
       margin: 0 auto;
     }
 
     .lifeinisrael__gallery-wrap {
       picture img {
-        width: 90vw;
+        width: 100vw;
         height: auto;
         margin: 0 auto;
         display: none;
@@ -844,24 +904,26 @@
 
   .pagination {
     display: flex;
+    margin: -40px auto 0;
   }
 }
 
 .masaisrael {
-  padding: 13% 0 25.6% 57.8%;
+  padding: 13% 0 25.6% 58.3%;
   background-image: url("../img/cynthia-magana-138943-unsplash.jpg");
 
   @include baground-img(100%, no-repeat, center 50px);
 
   h2 {
-    margin-top: 0;
+    margin: 0 0 26px;
 
     @include title;
+    letter-spacing: -0.5px;
   }
 
   p {
     max-width: 400px;
-    margin-bottom: 40px;
+    margin: 0 0 48px 2px;
 
     @include firaSans17;
     color: $color-white;
@@ -907,20 +969,21 @@
 
 @media (max-width: 767px) {
   .masaisrael {
-    background-position: -60px 50px;
-    background-size: 140% auto;
+    background-position: -58px 46px;
+    background-size: 185% auto;
     padding: 0 0 20vw 11px;
 
     h2 {
       width: 310px;
       font-size: 40px;
       letter-spacing: -0.2px;
-      margin: 0 auto 22vw auto;
+      margin: 0 auto 29vw auto;
     }
 
     p {
       width: 95%;
-      margin: 0 auto 20px;
+      margin: 0 auto 55px;
+      line-height: 160%;
     }
 
     button {
@@ -933,7 +996,7 @@
 
 .FAQ {
   min-height: 880px;
-  padding: 0 0 0 8%;
+  padding: 0 0 0 7.5%;
   box-sizing: border-box;
   background-image: url("../img/bag.png"), url("../img/faq.png"), url("../img/watercolor_bg4.jpg");
   background-size: 167px 177px, 47.2% auto, 100%;
@@ -941,16 +1004,17 @@
   background-position: left 720px, right 0, top;
 
   h2 {
-    margin: -9px 0 15px;
+    margin: -12px 0 4px;
 
     @include title;
+    letter-spacing: 1px;
   }
 }
 
 details {
   position: relative;
   width: 550px;
-  padding: 30px 0 32px 30px;
+  padding: 42px 0 27px 30px;
   box-sizing: border-box;
   border-bottom: 1px solid rgba(72, 72, 72, 0.2);
 
@@ -962,12 +1026,13 @@ details {
     cursor: pointer;
 
     @include firaSans17;
+    line-height: 150%;
 
     &::after {
       content: "";
       display: block;
       position: absolute;
-      top: 33px;
+      top: 44px;
       right: 30px;
       width: 10px;
       height: 10px;
@@ -987,7 +1052,7 @@ details {
 
   p {
     width: 480px;
-    margin-left: -30px;
+    margin: 25px 0 3px -30px;
 
     @include firaSans15;
     line-height: 140%;
@@ -1025,7 +1090,7 @@ details {
 
 details[open] summary::after {
   transform: rotate(-45deg);
-  top: 42px;
+  top: 55px;
 }
 
 @media (max-width: 1300px) {
@@ -1100,9 +1165,11 @@ details[open] summary::after {
     background-size: 167px 177px;
     background-position: left 400px;
     padding: 0 0 0 12px;
+
     details {
       max-width: 95%;
     }
+
     h2 {
       text-align: center;
     }
@@ -1116,18 +1183,20 @@ details[open] summary::after {
       width: 85%;
       padding: 0;
       font-size: 16px;
+
       &::after {
         right: 20px;
       }
     }
   }
+
   details[open] p {
-      width: 300px;
+    width: 300px;
   }
 }
 
 .reviews {
-  padding: 50px 14% 75px 7.5%;
+  padding: 50px 6.8% 75px 6.8%;
   box-sizing: border-box;
   background-image: url("../img/sketch-review.png"), url("../img/watercolor_bg5.jpg");
   background-size: 535px 318px, 100%;
@@ -1136,7 +1205,7 @@ details[open] summary::after {
 
   h2 {
     @include title;
-    margin: 0;
+    margin: 0 0 8px;
     text-align: center;
   }
 }
@@ -1154,7 +1223,7 @@ details[open] summary::after {
 
   picture {
     float: left;
-    margin-right: 30px;
+    margin-right: 37px;
   }
 
   .reviews__slider-pagination {
@@ -1167,17 +1236,17 @@ details[open] summary::after {
 .reviews__slider-figcaption {
   display: flex;
   flex-direction: column;
-  padding-top: 20px;
+  padding-top: 18px;
 
   h3 {
     margin-bottom: 0;
 
-    @include txt(firaSans, 24px, 150%, 400,$color-txt);
+    @include txt(firaSans, 24px, 150%, 400, $color-txt);
     opacity: 0.74;
   }
 
   h4 {
-    margin-top: 5px;
+    margin: 7px 0 14px;
 
     @include firaSans15;
     line-height: 140%;
@@ -1193,7 +1262,7 @@ details[open] summary::after {
 
     @include firaSans17;
     opacity: 0.74;
-    margin-bottom: 5px;
+    margin-bottom: 8px;
   }
 
   .reviews__slider-figcaption-link {
@@ -1318,16 +1387,16 @@ details[open] summary::after {
 }
 
 .details {
-  padding: 0 8.3% 80px 8%;
+  padding: 0 7.9% 115px 7.5%;
   box-sizing: border-box;
   background-image: url("../img/map.png"), url("../img/watercolor_bg6.jpg");
   background-size: 51.4% auto, 100%;
-  background-position: right 90px, top;
+  background-position: right 10px, top;
   background-repeat: no-repeat;
 
   h2 {
     @include title;
-    margin: 38px 0 45px 0;
+    margin: 32px 0 45px 0;
   }
 
   span {
@@ -1336,7 +1405,7 @@ details[open] summary::after {
 
     @include firaSans15;
     opacity: 0.74;
-    margin: 0 0 0 5px;
+    margin: 0 0 0 3px;
 
     a {
       width: 95px;
@@ -1355,7 +1424,7 @@ details[open] summary::after {
 
     @include firaSans17;
     opacity: 0.87;
-    margin: 28px 0 130px 0;
+    margin: 28px 0 132px 0;
   }
 }
 
@@ -1363,11 +1432,12 @@ details[open] summary::after {
   display: flex;
   justify-content: space-between;
   max-width: 380px;
-  margin: 38px 0 0 0;
+  margin: 40px 0 0 0;
 }
 
 .details__curator-figcaptoin {
   width: 250px;
+  margin: 0 0 0 25px;
 }
 
 .details__curator-figcaptoin-name {
@@ -1390,13 +1460,13 @@ details[open] summary::after {
 .details__curator-figcaptoin-socials {
   display: flex;
   justify-content: space-between;
-  width: 100px;
+  width: 90px;
 
   a {
     display: block;
     width: 22px;
     height: 22px;
-    margin-top: 18px;
+    margin-top: 15px;
     background-image: url("../img/sm2.svg");
 
     &:nth-of-type(1) {
@@ -1420,13 +1490,15 @@ details[open] summary::after {
   min-height: 100px;
 
   p {
-    width: 355px;
+    width: 358px;
     font-weight: 500;
+    line-height: 155%;
     margin: 0;
 
     span {
       opacity: 0.5;
-      margin: 15px 0 0 0;
+      margin: 14px 0 0 0;
+      letter-spacing: -1px;
     }
   }
 
@@ -1434,7 +1506,7 @@ details[open] summary::after {
   form input[type="tel"] {
     width: 250px;
     height: 59px;
-    margin-right: 20px;
+    margin-right: 17px;
     padding: 0 0 0 40px;
     box-sizing: border-box;
     border-radius: 80px;

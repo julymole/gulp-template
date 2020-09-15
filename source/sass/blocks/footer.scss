@@ -3,7 +3,7 @@
   justify-content: space-between;
   align-items: center;
   margin-top: -40px;
-  padding: 30px 114px;
+  padding: 23px 110px 23px 100px;
   border-top: 1px solid rgba(72, 72, 72, 0.2);
 
   a:nth-of-type(2) {
@@ -17,7 +17,7 @@
 .footer__socials {
   display: flex;
   justify-content: space-between;
-  width: 120px;
+  width: 105px;
   height: 25px;
 
   a {
@@ -31,11 +31,11 @@
     }
 
     &:nth-of-type(2) {
-      background-position: 24px;
+      background-position: 65px;
     }
 
     &:nth-of-type(3) {
-      background-position: 65px;
+      background-position: 24px;
     }
   }
 }
