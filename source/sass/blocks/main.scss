@@ -388,7 +388,7 @@
     }
   }
 
-  .active {
+  .programs .active {
     &::after {
       display: none;
     }
@@ -464,6 +464,7 @@
     &:focus {
       outline: none;
     }
+
     &::placeholder {
       opacity: 0.5;
     }

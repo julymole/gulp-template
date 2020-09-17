@@ -882,7 +882,7 @@ body {
         content: none; }
       .programs__buttons-wrapper .programs__buttons-wrapper-btn:focus::after {
         content: none; }
-  .active::after {
+  .programs .active::after {
     display: none; }
   .programs .programs__content-txt-blocks-block {
     width: 94%;
