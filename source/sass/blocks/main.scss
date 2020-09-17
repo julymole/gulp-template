@@ -258,7 +258,7 @@
   }
 }
 
-.active {
+.programs .active {
   position: relative;
   width: 200px;
   height: 68px;
@@ -293,7 +293,7 @@
   }
 
   h3 {
-    margin-top: 17px;
+    margin: 17px 0 25px;
 
     @include title;
     font-size: 28px;
@@ -307,6 +307,7 @@
     line-height: 170%;
     opacity: 0.87;
     width: 560px;
+    letter-spacing: 0.1px;
   }
 }
 
@@ -332,39 +333,45 @@
 
 @media (max-width: 767px) {
   .programs {
-    padding: 30px 17px 22px;
-    background-position: right 300px;
+    padding: 30px 17px 22px 0;
+    background-size: 310px auto;
+    background-position: 28px 152px;
 
     h2 {
       text-align: center;
-      margin-bottom: 15px;
+      margin: 0 0 10px 17px;
     }
 
     .programs__content {
-      flex-wrap: wrap;
+      flex-direction: column;
+      justify-content: center;
+      align-content: center;
     }
   }
 
-  .programs__content-buttons-block {
+  .programs__buttons-wrapper {
+    width: 100%;
+    height: 60px;
     flex-direction: row;
     justify-content: flex-start;
-    align-content: center;
-    flex-wrap: wrap;
-    max-width: 100%;
-    height: 140px;
-    margin-bottom: 40px;
+    margin-bottom: 0;
     padding-right: 5px;
+    overflow-x: auto;
 
-    .programs__content-buttons-block-btn {
-      justify-content: flex-start;
+    .programs__buttons-wrapper-btn {
+      justify-content: center;
       align-items: center;
       width: 181px;
       height: 48px;
-      padding: 5px 0 5px 10px;
+      padding: 8px 12px;
       margin: 0 5px 5px 0;
       border-radius: 60.6704px;
       text-transform: lowercase;
       font-size: 16px;
+
+      svg {
+        width: 32px;
+      }
 
       &:hover {
         width: 181px;
@@ -374,22 +381,34 @@
       &:hover::after {
         content: none;
       }
+
+      &:focus::after {
+        content: none;
+      }
     }
   }
-}
 
-.programs__content-txt-blocks-block {
-  max-width: 95%;
-
-  h3 {
-    font-size: 24px;
-    margin: 12px 0 16px;
+  .active {
+    &::after {
+      display: none;
+    }
   }
 
-  p {
-    max-width: 100%;
-    line-height: 22px;
-    letter-spacing: -0.7px;
+  .programs .programs__content-txt-blocks-block {
+    width: 94%;
+    margin-left: 17px;
+
+    h3 {
+      font-size: 24px;
+      margin: 18px 0 0;
+    }
+
+    p {
+      width: 100%;
+      line-height: 22px;
+      letter-spacing: -0.7px;
+      margin: 14px 0 19px;
+    }
   }
 }
 
@@ -436,7 +455,7 @@
 
     @include firaSans17;
     font-variant: small-caps;
-    opacity: 0.5;
+    opacity: 1;
 
     &:hover {
       cursor: pointer;
@@ -444,6 +463,9 @@
 
     &:focus {
       outline: none;
+    }
+    &::placeholder {
+      opacity: 0.5;
     }
   }
 
@@ -509,7 +531,7 @@
 @media (max-width: 767px) {
   .wanttogo {
     min-height: 600px;
-    padding: 42px 17px 400px 17px;
+    padding: 35px 17px 400px 17px;
     background-size: 105px auto, 130% auto;
     background-position: left top, center 340px;
   }
@@ -557,7 +579,7 @@
 .howtogo {
   max-width: 100%;
   min-height: 1200px;
-  padding: 12.5% 0 50px 51.2%;
+  padding: 10% 0 50px 51.2%;
   box-sizing: border-box;
   background-image: url("../img/img-howtogo.png"), url("../img/stamp.png"), url("../img/watercolor_bg2.jpg");
   background-size: 42.5% auto, 16% auto, 100%;
@@ -569,7 +591,8 @@
 
     h2 {
       @include title;
-      margin: 0 0 22px;
+      margin-bottom: 22px;
+      letter-spacing: 0.8px;
     }
 
     p {
@@ -587,7 +610,7 @@
 
     ol li {
       height: 50px;
-      margin: 30px 0 0 0px;
+      margin: 30px 0 0 0;
       position: relative;
 
       @include firaSans15;
@@ -729,27 +752,28 @@
       }
 
       span {
-        width: 95%; 
+        width: 95%;
         margin-top: 38px;
-        padding-left: 5px;
+        padding-left: 10px;
         font-size: 14px;
         line-height: 160%;
-      }
-      
-      ol li {
-         margin-top: 35px;
-        line-height: 140%;
-        
-        &::before {
-        left: -48px;
-        top: 0;
+        margin-left: -5px;
       }
 
-      &::after {
-        left: -30px;
-        top: 35px;
-        height: 50px;
-      }
+      ol li {
+        margin: 35px 0 0;
+        line-height: 150%;
+
+        &::before {
+          left: -48px;
+          top: 0;
+        }
+
+        &::after {
+          left: -30px;
+          top: 35px;
+          height: 50px;
+        }
       }
     }
   }
@@ -766,7 +790,7 @@
   background-position: top, right 650px;
 
   h2 {
-    margin: 0px 0 25px 12px;
+    margin: 0 0 25px 12px;
     text-align: center;
 
     @include title;
@@ -869,7 +893,7 @@
     margin-top: -193px;
     padding: 20px 9% 82px 5%;
     background: none;
-    
+
     h2 {
       line-height: 120%;
     }
@@ -910,6 +934,7 @@
 
 .masaisrael {
   padding: 13% 0 25.6% 58.3%;
+  box-sizing: border-box;
   background-image: url("../img/cynthia-magana-138943-unsplash.jpg");
 
   @include baground-img(100%, no-repeat, center 50px);
@@ -1162,36 +1187,48 @@ details[open] summary::after {
 @media (max-width: 767px) {
   .FAQ {
     background-image: url("../img/bag.png");
-    background-size: 167px 177px;
-    background-position: left 400px;
-    padding: 0 0 0 12px;
-
-    details {
-      max-width: 95%;
-    }
+    background-size: 145px 177px;
+    background-position: left 655px;
+    padding: 0 0 0 8px;
 
     h2 {
       text-align: center;
+      margin: 13px 0 0;
+      line-height: 130%;
     }
   }
 
-  details {
-    padding: 15px 0 15px 20px;
+  .FAQ details {
+    max-width: 95%;
+    padding: 34px 0 22px 20px;
+    box-sizing: border-box;
     margin: 0 auto;
+    line-height: 160%;
+
+    &::before {
+      top: 20px;
+    }
 
     summary {
       width: 85%;
       padding: 0;
       font-size: 16px;
+      line-height: 160%;
 
       &::after {
-        right: 20px;
+        right: 8px;
+        top: 38px;
       }
     }
   }
 
   details[open] p {
     width: 300px;
+    margin-left: -20px;
+  }
+
+  details[open] summary::after {
+    top: 50px;
   }
 }
 
@@ -1361,15 +1398,21 @@ details[open] summary::after {
 @media (max-width: 767px) {
   .reviews {
     background-position: left 700px, right 800px;
+    padding: 70px 0 0;
+
+    h2 {
+      font-size: 32px;
+      margin: 0 0 17px;
+    }
   }
 
   .reviews__slider {
-    padding: 0 8%;
+    padding: 0 6%;
 
     img {
       width: 100%;
       height: auto;
-      margin: 0 auto;
+      margin: 0 0 0 18px;
     }
 
     .reviews__slider-pagination {
@@ -1378,6 +1421,28 @@ details[open] summary::after {
 
     .reviews__slider-figcaption {
       clear: both;
+
+      h4 {
+        margin: 10px 0 25px;
+        display: flex;
+        flex-direction: column;
+      }
+
+      p {
+        line-height: 160%;
+        margin-bottom: 20px;
+      }
+    }
+
+    .reviews__slider-figcaption-link {
+      margin: 5px 0 0;
+      font-size: 16px;
+      letter-spacing: -0.1px;
+    }
+
+    .reviews__slider-figcaption-row {
+      margin: 22px 0 0 -5px;
+      width: 100px;
     }
 
     .reviews__slider-figcaption-row-pagination {
@@ -1623,27 +1688,44 @@ details[open] summary::after {
 @media (max-width: 767px) {
   .details {
     background-image: url("../img/map.png");
-    background-size: 100%;
-    background-position: center 650px;
+    background-size: 200%;
+    background-position: -210px 720px;
+    padding: 78px 15px 100px;
 
     h2 {
       font-size: 32px;
       text-align: center;
+      line-height: 130%;
+      margin: 0 0 18px;
     }
 
     .details__curator {
       flex-direction: column;
+      margin: 40px 0 0 0;
+    }
+
+    .details__curator-figcaptoin {
+      margin: 10px 0 0 0;
     }
 
     p {
-      width: 90%;
-      margin-bottom: 80vw;
+      width: 85%;
+      margin: 35px 0 140vw;
+      line-height: 180%;
     }
   }
 
   .details__form {
     p {
-      margin: 30px auto;
+      width: 100%;
+      margin: 31px 0 0 0;
+      letter-spacing: 0.6px;
+
+      span {
+        margin: 9px 0 0;
+        line-height: 160%;
+        letter-spacing: 0.1px;
+      }
     }
 
     form {
@@ -1651,7 +1733,8 @@ details[open] summary::after {
       flex-direction: column;
       justify-content: space-between;
       align-items: center;
-      height: 200px;
+      height: 210px;
+      margin-top: 30px;
 
       input[type="text"],
       input[type="tel"] {
@@ -1666,6 +1749,7 @@ details[open] summary::after {
         width: 264px;
         height: 59px;
         font-size: 17px;
+        margin-top: 5px;
       }
     }
   }
