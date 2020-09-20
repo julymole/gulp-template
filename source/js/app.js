@@ -56,20 +56,34 @@ $(document).ready(function () {
   // Открытие popup при клике на "заказать звонок"
   $('.header__row-toform').click(function () {
     $('.popup').fadeIn();
+    $('body').css('overflow', 'hidden');
   });
 
   // Закрытие popup при клике на крестик
   $('.popup__close').click(function () {
     $('.popup').fadeOut();
+    $('body').css('overflow', 'auto');
   });
 
   // Открытие popup "заявка принята" при клике на кнопки "перезвоните мне"
-  $('input[value*="перезвоните"]').click(function () {
+  var id = $('form').attr("id");
+  var submit = $('input[value*="перезвоните"]').children('#id');
+  (submit).click(function () {
     var errors = 0;
-    var fields = $('input[type=text], input[type=tel]')
-    fields.each(function () {
+    var fields1 = (submit).siblings('input[type=text]');
+    var fields2 = (submit).siblings('input[type=tel]');
+    fields1.each(function () {
+      var value = $(fields1).val();
+      if (value.length < 3 || value == 'имя') {
+        $(this).css('background', '#f4e2e2');
+        errors++;
+      } else {
+        $(this).css('background', 'none');
+      }
+    });
+    fields2.each(function () {
       var value = $(this).val();
-      if (value.length < 3 || value == 'имя' || value == 'телефон') {
+      if (value.length < 10 || value == 'телефон') {
         $(this).css('background', '#f4e2e2');
         errors++;
       } else {
