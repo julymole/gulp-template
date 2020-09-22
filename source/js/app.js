@@ -66,9 +66,9 @@ $(document).ready(function () {
   });
 
   // Открытие popup "заявка принята" при клике на кнопки "перезвоните мне"
-  var id = $('form').attr("id");
-  var submit = $('input[value*="перезвоните"]').children('#id');
-  (submit).click(function () {
+  $('input[value*="перезвоните"]').click(function () {
+    var id = $(this).parent('form').attr("id");
+    var submit = $(this).children('#id');
     var errors = 0;
     var fields1 = (submit).siblings('input[type=text]');
     var fields2 = (submit).siblings('input[type=tel]');
